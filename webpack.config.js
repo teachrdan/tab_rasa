@@ -26,7 +26,7 @@ module.exports = {
       },
       {
         test: /\.css$/i,
-        use: ["style-loader", "css-loader"],
+        use: ["style-loader", "css-loader", "postcss-loader"],
       },
       {
         test: /\.(png|jp(e*)g|svg|gif)$/,
@@ -38,20 +38,20 @@ module.exports = {
     extensions: ["", ".js", ".jsx"],
   },
   devServer: {
-    static: {
-      directory: path.join(__dirname, "public"),
-      watch: true,
-    },
-    open: true,
-    compress: true,
-    port: process.env.PORT || 1337,
-    hot: true,
-    liveReload: true,
     client: {
       overlay: {
         errors: true,
       },
       progress: true,
+    },
+    compress: true,
+    hot: true,
+    liveReload: true,
+    open: true,
+    port: process.env.PORT || 1337,
+    static: {
+      directory: path.join(__dirname, "public"),
+      watch: true,
     },
   },
 };
