@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import "./App.css";
 import { useQuery } from "react-query";
+// import "./style.css";
 
 export default function AppBody() {
   const { data, isLoading } = useQuery("repoData", () =>
@@ -14,7 +14,7 @@ export default function AppBody() {
   if (isLoading) return "Loading...";
 
   return (
-    <div className="App bg-gradient-to-b from-gray-700 to-gray-900">
+    <div className="bg-gradient-to-b from-gray-700 to-gray-900">
       App goes here
     </div>
   );
