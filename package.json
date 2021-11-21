@@ -38,6 +38,7 @@
     "webpack": "^5.58.1"
   },
   "scripts": {
+    "server": "nodemon server.js",
     "start": "webpack serve",
     "test": "jest"
   },
