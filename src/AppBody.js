@@ -3,9 +3,7 @@ import { useQuery } from "react-query";
 
 export default function AppBody() {
   const { data, isLoading } = useQuery("repoData", () =>
-    fetch("https://api.github.com/repos/tannerlinsley/react-query").then(
-      (res) => res.json()
-    )
+    fetch("http://localhost:3000/express_backend").then((res) => res.json())
   );
 
   console.log("data", data);

@@ -6,7 +6,7 @@ const { runCLI } = require("@jest/core");
 
 describe("App", function () {
   it("should display default text", function () {
-    let container = document.createElement("div");
+    let container = window.document.createElement("div");
     document.body.appendChild(container);
     act(() => {
       ReactDOM.render(<App />, container);
